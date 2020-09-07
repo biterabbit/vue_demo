@@ -12,11 +12,11 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS"
+      "pre-commit": "npm run test",
+      "commit-msg": "commitlint -E $HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
