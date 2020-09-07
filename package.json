@@ -66,6 +66,7 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "validate-commit-msg": "^2.14.0",
     "vue-jest": "^1.0.2",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
@@ -74,6 +75,23 @@
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert"],
+      "scope": {
+        "required": false,
+        "allowed": ["*"],
+        "validate": false,
+        "multiple": false
+      },
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "subjectPattern": ".+",
+      "subjectPatternErrorMsg": "subject does not match subject pattern!",
+      "helpMessage": "",
+      "autoFix": false
+    }
   },
   "engines": {
     "node": ">= 6.0.0",
